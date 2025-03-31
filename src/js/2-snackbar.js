@@ -1,10 +1,10 @@
-import iziToast from "izitoast/dist/js/iziToast.min.js";
-import "izitoast/dist/css/iziToast.min.css";
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector(".form");
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.form');
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener('submit', (event) => {
         event.preventDefault();
 
         const delay = parseInt(form.elements.delay.value, 10);
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         new Promise((resolve, reject) => {
             setTimeout(() => {
-                if (state === "fulfilled") {
+                if (state === 'fulfilled') {
                     resolve(delay);
                 } else {
                     reject(delay);
@@ -21,17 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then((delay) => {
             iziToast.success({
-                title: "✅ Успішно!",
+                title: '✅ Успішно!',
                 message: `Fulfilled promise in ${delay}ms`,
-                position: "topRight",
+                position: 'topRight',
             });
         })
         .catch((delay) => {
             iziToast.error({
-                title: "❌ Помилка!",
+                title: '❌ Помилка!',
                 message: `Rejected promise in ${delay}ms`,
-                position: "topRight",
+                position: 'topRight',
             });
         });
     });
 });
+
