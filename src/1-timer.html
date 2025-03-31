@@ -12,13 +12,14 @@
         margin-top: 20px;
       }
     </style>
+    <script type="module" src="./js/1-timer.js"></script>
   </head>
   <body>
     <h1>Таймер зворотного відліку</h1>
 
     <label>
       Виберіть дату:
-      <input type="datetime-local" id="datetime-picker" />
+      <input type="text" id="datetime-picker" />
     </label>
 
     <button type="button" id="start-btn" data-start>Старт</button>
@@ -28,7 +29,5 @@
       <span data-minutes>00</span>:
       <span data-seconds>00</span>
     </div>
-
-    <script type="module" src="./js/1-timer.js"></script>
   </body>
 </html>
