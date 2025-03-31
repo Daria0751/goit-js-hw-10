@@ -12,16 +12,24 @@
         margin-top: 20px;
       }
     </style>
+    <script type="module" crossorigin src="/goit-js-hw-10/1-timer.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-B5Qt9EMX.js">
   </head>
   <body>
     <h1>Таймер зворотного відліку</h1>
+
     <label>
       Виберіть дату:
       <input type="datetime-local" id="datetime-picker" />
     </label>
-    <button id="start-btn">Старт</button>
-    <div id="timer">00:00:00</div>
 
-    <script src="./js/1-timer.js"></script>
+    <button type="button" id="start-btn" data-start>Старт</button>
+
+    <div id="timer">
+      <span data-days>00</span>: <span data-hours>00</span>:
+      <span data-minutes>00</span>:
+      <span data-seconds>00</span>
+    </div>
+
   </body>
 </html>
