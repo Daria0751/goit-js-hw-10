@@ -5,7 +5,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
 document.addEventListener("DOMContentLoaded", () => {
     const datePicker = document.getElementById("datetime-picker");
-    const startBtn = document.getElementById("start-btn");
+    const startBtn = document.querySelector("[data-start]");
     const daysEl = document.querySelector("[data-days]");
     const hoursEl = document.querySelector("[data-hours]");
     const minutesEl = document.querySelector("[data-minutes]");
@@ -81,3 +81,4 @@ document.addEventListener("DOMContentLoaded", () => {
         secondsEl.textContent = String(seconds).padStart(2, "0");
     }
 });
+
